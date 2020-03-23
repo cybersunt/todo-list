@@ -11,12 +11,14 @@
   align-items: flex-end;
 }
 
-.app-header h1 {
+.app-header__caption {
   flex-grow: 1;
-}
+  line-height: 1.2;
+  margin-bottom: 0;}
 
-.app-header h2 {
+.app-header__description {
   font-size: 1.2rem;
+  font-weight: 500;
   color: grey;
 }
 
@@ -25,17 +27,29 @@
 }
 
 .item-add-form input {
-  margin-right: 3px;
+  margin-right: 10px;
 }
 
-.search-input {
-  width: auto;
-  flex-grow: 1;
-  margin-right: 3px;
-}
-
-.todo-list .list-group-item {
+.todo-list__item {
   padding: .25rem .75rem;
+}
+
+.todo-list__item-wrapper {
+  display: flex;
+}
+
+.todo-list__item-label {
+  flex: 1 1 auto;
+  margin-right: .75rem;
+}
+
+.todo-list__item-wrapper button {
+  width: 30px;
+  height: 30px;
+}
+
+.todo-list__item-wrapper .btn-outline-success {
+margin-right: 5px;
 }
 
 .todo-app {
@@ -43,6 +57,12 @@
   max-width: 400px;
 }
 
-.top-panel {
+.filters-panel {
   margin: 1rem 0;
+}
+
+.filters-panel .search-input {
+  width: auto;
+  flex-grow: 1;
+  margin-right: 10px;
 }

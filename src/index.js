@@ -4,10 +4,13 @@ import './index.css';
 
 const el = (
   <div className="todo-app">
+
     <div className="app-header d-flex">
-      <h1>Todo List</h1><h2>3 more to do, 0 done</h2>
+      <h1 className="app-header__caption">Todo List</h1>
+      <div className="app-header__description">3 more to do, 0 done</div>
     </div>
-    <div className="top-panel d-flex">
+
+    <div className="filters-panel d-flex">
       <input className="form-control search-input"
              placeholder="type to search"
              value="1"/>
@@ -18,40 +21,42 @@ const el = (
         </div>
       </div>
     <ul className="list-group todo-list">
-      <li className="list-group-item">
-        <span className="todo-list-item">
-          <span className="todo-list-item-label">Drink Coffee</span>
+      <li className="list-group-item todo-list__item">
+        <div className="todo-list__item-wrapper">
+          <div className="todo-list__item-label">Drink Coffee</div>
 
-          <button type="button" className="btn btn-outline-success btn-sm float-right">
+          <button type="button" className="btn btn-outline-success btn-sm">
             <i className="fa fa-exclamation"></i>
           </button>
-          <button type="button" className="btn btn-outline-danger btn-sm float-right">
-            <i className="fa fa-trash-o"></i>
-          </button>
-        </span>
-      </li>
-      <li className="list-group-item">
-        <span className="todo-list-item">
-          <span className="todo-list-item-label">Build React App</span>
 
-          <button type="button" className="btn btn-outline-success btn-sm float-right">
-            <i className="fa fa-exclamation"></i>
-          </button>
-          <button type="button" className="btn btn-outline-danger btn-sm float-right">
+          <button type="button" className="btn btn-outline-danger btn-sm">
             <i className="fa fa-trash-o"></i>
           </button>
-        </span>
+
+        </div>
       </li>
-      <li className="list-group-item">
-        <span className="todo-list-item">
-          <span className="todo-list-item-label">Have a lunch</span>
-          <button type="button" className="btn btn-outline-success btn-sm float-right">
+      <li className="list-group-item todo-list__item">
+        <div className="todo-list__item-wrapper">
+          <div className="todo-list__item-label">Build React App</div>
+
+          <button type="button" className="btn btn-outline-success btn-sm">
             <i className="fa fa-exclamation"></i>
           </button>
-          <button type="button" className="btn btn-outline-danger btn-sm float-right">
+          <button type="button" className="btn btn-outline-danger btn-sm">
             <i className="fa fa-trash-o"></i>
           </button>
-        </span>
+        </div>
+      </li>
+      <li className="list-group-item todo-list__item">
+        <div className="todo-list__item-wrapper">
+          <div className="todo-list__item-label">Have a lunch</div>
+          <button type="button" className="btn btn-outline-success btn-sm">
+            <i className="fa fa-exclamation"></i>
+          </button>
+          <button type="button" className="btn btn-outline-danger btn-sm">
+            <i className="fa fa-trash-o"></i>
+          </button>
+        </div>
       </li>
     </ul>
 
