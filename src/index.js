@@ -2,24 +2,43 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const el = (
-  <div className="todo-app">
-
-    <div className="app-header d-flex">
-      <h1 className="app-header__caption">Todo List</h1>
-      <div className="app-header__description">3 more to do, 0 done</div>
+const App = () => {
+  return (
+    <div className="todo-app">
+      <Header/>
+      <SearchPanel/>
+      <TodoList/>
+      <CreateItem/>
     </div>
+  )
+}
 
-    <div className="filters-panel d-flex">
+const Header = () => {
+  return (
+    <div className="header d-flex">
+      <h1 className="header__caption">Todo List</h1>
+      <div className="header__description">3 more to do, 0 done</div>
+    </div>
+  )
+};
+
+const SearchPanel = () => {
+  return (
+    <div className="search-panel d-flex">
       <input className="form-control search-input"
              placeholder="type to search"
              value="1"/>
-        <div className="btn-group">
-          <button type="button" className="btn btn-outline-secondary">All</button>
-          <button type="button" className="btn btn-info">Active</button>
-          <button type="button" className="btn btn-outline-secondary">Done</button>
-        </div>
+      <div className="btn-group">
+        <button type="button" className="btn btn-outline-secondary">All</button>
+        <button type="button" className="btn btn-info">Active</button>
+        <button type="button" className="btn btn-outline-secondary">Done</button>
       </div>
+    </div>
+  )
+};
+
+const TodoList = () => {
+  return (
     <ul className="list-group todo-list">
       <li className="list-group-item todo-list__item">
         <div className="todo-list__item-wrapper">
@@ -59,16 +78,20 @@ const el = (
         </div>
       </li>
     </ul>
+  )
+};
 
+const CreateItem = () => {
+  return (
     <form className="item-add-form d-flex">
       <input type="text"
              className="form-control"
              placeholder="What needs to be done"
              value=""/>
-             <button className="btn btn-outline-secondary">AddItem</button>
-      </form>
-    </div>
-);
+      <button className="btn btn-outline-secondary">AddItem</button>
+    </form>
+  )
+};
 
-    ReactDOM.render(el, document.querySelector('#root'));
+ReactDOM.render(<App/>, document.querySelector('#root'));
 

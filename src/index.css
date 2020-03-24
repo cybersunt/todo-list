@@ -7,16 +7,16 @@
   margin: 1rem 0;
 }
 
-.app-header {
+.header {
   align-items: flex-end;
 }
 
-.app-header__caption {
+.header__caption {
   flex-grow: 1;
   line-height: 1.2;
   margin-bottom: 0;}
 
-.app-header__description {
+.header__description {
   font-size: 1.2rem;
   font-weight: 500;
   color: grey;
@@ -57,11 +57,11 @@ margin-right: 5px;
   max-width: 400px;
 }
 
-.filters-panel {
+.search-panel {
   margin: 1rem 0;
 }
 
-.filters-panel .search-input {
+.search-panel .search-input {
   width: auto;
   flex-grow: 1;
   margin-right: 10px;
