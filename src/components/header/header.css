@@ -1,0 +1,14 @@
+.header {
+  align-items: flex-end;
+}
+
+.header__caption {
+  flex-grow: 1;
+  line-height: 1.2;
+  margin-bottom: 0;}
+
+.header__description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: grey;
+}
