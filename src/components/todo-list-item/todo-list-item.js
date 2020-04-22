@@ -1,10 +1,10 @@
 import React from 'react';
 import './todo-list-item.css';
 
-const TodoListItem = (props) => {
+const TodoListItem = ({ label }) => {
   return (
     <li className="list-group-item todo-list-item">
-      <div className="todo-list-item__label">{props.label}</div>
+      <div className="todo-list-item__label">{label}</div>
 
       <button type="button" className="btn btn-outline-success btn-sm">
         <i className="fa fa-exclamation"></i>
