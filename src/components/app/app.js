@@ -5,6 +5,7 @@ import Header from "../header/header";
 import SearchPanel from "../search-panel/search-panel";
 import TodoList from "../todo-list/todo-list";
 import CreateItem from "../create-item/create-item";
+import ItemStatusFilter from "../item-status-filter/item-status-filter";
 
 const todoData = [
   {label: 'Drink Coffee', important: false, id: 1},
@@ -15,8 +16,11 @@ const todoData = [
 const App = () => {
   return (
     <div className="todo-app">
-      <Header/>
-      <SearchPanel/>
+      <Header toDo={1} done={3}/>
+      <div className="top-panel search-panel d-flex">
+        <SearchPanel />
+        <ItemStatusFilter />
+      </div>
       <TodoList todos={todoData}/>
       <CreateItem/>
     </div>
