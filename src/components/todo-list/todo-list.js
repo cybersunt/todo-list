@@ -5,7 +5,9 @@ const TodoList = () => {
   return (
     <ul className="list-group todo-list">
       <TodoListItem label="Drink Coffee"/>
-      <TodoListItem label="Build React App"/>
+      <TodoListItem
+        label="Build React App"
+        important/>
       <TodoListItem label="Have a lunch"/>
     </ul>
   )
