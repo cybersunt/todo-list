@@ -4,8 +4,9 @@ import TodoListItem from "../todo-list-item/todo-list-item";
 const TodoList = ({ todos }) => {
 
   const elements = todos.map((item) => {
+    const {id, ...itemProps } = item;
     return (
-      <TodoListItem { ...item }/>
+      <TodoListItem { ...itemProps } key={id}/>
     )
   });
 
