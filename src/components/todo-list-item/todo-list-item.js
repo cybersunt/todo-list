@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import './todo-list-item.css';
 
-class TodoListItem extends Component{
+class TodoListItem extends Component {
+
+  onLabelClick = () => {
+    console.log(`Done: ${this.props.label}`);
+  }
+
   render() {
     const { label, important = false } = this.props;
 
@@ -13,7 +18,10 @@ class TodoListItem extends Component{
     return (
       <li className="list-group-item todo-list-item">
         <div className="todo-list-item__label"
-             style={style}>{label}</div>
+             style={style}
+             onClick={this.onLabelClick}>
+          {label}
+        </div>
         <button type="button" className="btn btn-outline-success btn-sm">
           <i className="fa fa-exclamation"></i>
         </button>
