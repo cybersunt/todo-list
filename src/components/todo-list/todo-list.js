@@ -1,14 +1,14 @@
 import React from 'react';
 import TodoListItem from "../todo-list-item/todo-list-item";
 
-const TodoList = () => {
+const TodoList = ({ todos }) => {
   return (
     <ul className="list-group todo-list">
-      <TodoListItem label="Drink Coffee"/>
+      <TodoListItem label={todos[0].label}/>
       <TodoListItem
-        label="Build React App"
-        important/>
-      <TodoListItem label="Have a lunch"/>
+        label={todos[1].label}
+        important={todos[0].label}/>
+      <TodoListItem label={todos[2].label}/>
     </ul>
   )
 };
