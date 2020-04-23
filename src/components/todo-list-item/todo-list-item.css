@@ -14,10 +14,15 @@
   height: 30px;
 }
 
-.todo-list-item .btn-outline-success {
+.todo-list-item .btn-outline-danger {
   margin-right: 5px;
 }
 
 .todo-list-item.done .todo-list-item__label {
   text-decoration: line-through;
+}
+
+.todo-list-item.important .todo-list-item__label {
+  font-weight: bold;
+  color: steelblue;
 }

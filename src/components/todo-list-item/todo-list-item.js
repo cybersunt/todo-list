@@ -4,7 +4,8 @@ import './todo-list-item.css';
 class TodoListItem extends Component {
 
   state = {
-    done: false
+    done: false,
+    important: false
   };
 
   onLabelClick = () => {
@@ -13,33 +14,37 @@ class TodoListItem extends Component {
     })
   };
 
+  onMarkImportant = () => {
+    this.setState({
+      important: true
+    })
+  };
+
   render() {
-    const { label, important = false } = this.props;
-    const { done } = this.state;
+    const { label } = this.props;
+    const { done, important } = this.state;
 
     let classNames = 'list-group-item todo-list-item';
-    if(done) {
+    if (done) {
       classNames += ' done';
     }
-
-    const style = {
-      color: important ? 'steelblue' : 'black',
-      fontWeight: important ? 'bold' : 'normal',
-    };
+    if (important) {
+      classNames += ' important';
+    }
 
     return (
       <li className={classNames}>
         <div className="todo-list-item__label"
-             style={style}
              onClick={this.onLabelClick}>
           {label}
         </div>
-        <button type="button" className="btn btn-outline-success btn-sm">
-          <i className="fa fa-exclamation"></i>
-        </button>
-
         <button type="button" className="btn btn-outline-danger btn-sm">
           <i className="fa fa-trash-o"></i>
+        </button>
+        <button type="button"
+                className="btn btn-outline-success btn-sm"
+                onClick={this.onMarkImportant}>
+          <i className="fa fa-exclamation"></i>
         </button>
       </li>
     )
