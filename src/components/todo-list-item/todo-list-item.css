@@ -17,3 +17,7 @@
 .todo-list-item .btn-outline-success {
   margin-right: 5px;
 }
+
+.todo-list-item.done .todo-list-item__label {
+  text-decoration: line-through;
+}
