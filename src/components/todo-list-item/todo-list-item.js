@@ -42,9 +42,13 @@ class TodoListItem extends Component {
              onClick={this.onLabelClick}>
           {label}
         </div>
-        <button type="button" className="btn btn-outline-danger btn-sm">
+
+        <button type="button"
+                className="btn btn-outline-danger btn-sm"
+                onClick={this.props.onDeleted}>
           <i className="fa fa-trash-o"></i>
         </button>
+
         <button type="button"
                 className="btn btn-outline-success btn-sm"
                 onClick={this.onMarkImportant}>

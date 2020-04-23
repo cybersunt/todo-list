@@ -1,12 +1,12 @@
 import React from 'react';
 import TodoListItem from "../todo-list-item/todo-list-item";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onDeleted }) => {
 
   const elements = todos.map((item) => {
     const {id, ...itemProps } = item;
     return (
-      <TodoListItem { ...itemProps } key={id}/>
+      <TodoListItem { ...itemProps } key={id} onDeleted={() => onDeleted(id)}/>
     )
   });
 
@@ -18,3 +18,5 @@ const TodoList = ({ todos }) => {
 };
 
 export default TodoList;
+
+
