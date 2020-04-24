@@ -9,14 +9,23 @@ import ItemStatusFilter from "../item-status-filter/item-status-filter";
 
 class App extends Component {
 
-  maxID = 100;
+  maxId = 0;
 
   state = {
     todoData: [
-      {label: 'Drink Coffee', important: false, id: 1},
-      {label: 'Make Awesome App', important: true, id: 2},
-      {label: 'Have a lunch', important: false, id: 3}
+      this.createTodoItem('Drink Coffee'),
+      this.createTodoItem('Make Awesome App'),
+      this.createTodoItem('Have a lunch')
     ]
+  }
+
+  createTodoItem (label) {
+    return {
+      label,
+      important: false,
+      done: false,
+      id: this.maxId++
+    };
   }
 
   deleteItem = (id) => {
@@ -33,12 +42,8 @@ class App extends Component {
     })
   };
 
-  addItem = (text) => {
-    const newItem = {
-      label: text,
-      important: false,
-      id: this.maxId++
-    };
+  addItem = (label) => {
+    const newItem = this.createTodoItem(label);
 
     this.setState(({ todoData }) => {
       const newArr = [
@@ -53,11 +58,26 @@ class App extends Component {
   };
 
   onToggleDone = (id) => {
-    console.log('Toggle Done ', id);
+    this.setState(({todoData})=> {
+      const idx = todoData.findIndex((el) => el.id === id);
+
+      const oldItem = todoData[idx];
+      const newItem = {...oldItem, done: !oldItem.done};
+
+      const newArray = [
+        ...todoData.slice(0, idx),
+        newItem,
+        ...todoData.slice(idx + 1)
+      ];
+
+      return {
+        todoData: newArray
+      };
+    })
   };
 
   onToggleImportant = (id) => {
-    console.log('Toggle Important ', id);;
+    console.log('Toggle Important ', id);
   };
 
   render() {
