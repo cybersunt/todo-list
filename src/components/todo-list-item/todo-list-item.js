@@ -1,27 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './todo-list-item.css';
 
-const TodoListItem = ({ label, important = false}) => {
+class TodoListItem extends Component {
 
-  const style = {
-    color: important ? 'steelblue' : 'black',
-    fontWeight: important ? 'bold' : 'normal',
-  };
+  render() {
+    const { label, done, important, onDeleted, onToggleImportant, onToggleDone, } = this.props;
 
-  return (
-    <li className="list-group-item todo-list-item">
-      <div className="todo-list-item__label"
-           style={style}>{label}</div>
+    let classNames = 'list-group-item todo-list-item';
+    if (done) {
+      classNames += ' done';
+    }
+    if (important) {
+      classNames += ' important';
+    }
 
-      <button type="button" className="btn btn-outline-success btn-sm">
-        <i className="fa fa-exclamation"></i>
-      </button>
+    return (
+      <li className={classNames}>
+        <div className="todo-list-item__label"
+             onClick={onToggleDone}>
+          {label}
+        </div>
 
-      <button type="button" className="btn btn-outline-danger btn-sm">
-        <i className="fa fa-trash-o"></i>
-      </button>
-    </li>
-  )
-};
+        <button type="button"
+                className="btn btn-outline-danger btn-sm"
+                onClick={onDeleted}>
+          <i className="fa fa-trash-o"></i>
+        </button>
+
+        <button type="button"
+                className="btn btn-outline-success btn-sm"
+                onClick={onToggleImportant}>
+          <i className="fa fa-exclamation"></i>
+        </button>
+      </li>
+    )
+  }
+}
 
 export default TodoListItem;
