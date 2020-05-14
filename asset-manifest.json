@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/todo-list-react/static/css/main.c3079e98.chunk.css",
-    "main.js": "/todo-list-react/static/js/main.f8c5180d.chunk.js",
-    "main.js.map": "/todo-list-react/static/js/main.f8c5180d.chunk.js.map",
-    "runtime-main.js": "/todo-list-react/static/js/runtime-main.8ec663f4.js",
-    "runtime-main.js.map": "/todo-list-react/static/js/runtime-main.8ec663f4.js.map",
-    "static/js/2.c1d921b9.chunk.js": "/todo-list-react/static/js/2.c1d921b9.chunk.js",
-    "static/js/2.c1d921b9.chunk.js.map": "/todo-list-react/static/js/2.c1d921b9.chunk.js.map",
-    "index.html": "/todo-list-react/index.html",
-    "precache-manifest.d1d3d5b7885319bbc2e7960b28e1daea.js": "/todo-list-react/precache-manifest.d1d3d5b7885319bbc2e7960b28e1daea.js",
-    "service-worker.js": "/todo-list-react/service-worker.js",
-    "static/css/main.c3079e98.chunk.css.map": "/todo-list-react/static/css/main.c3079e98.chunk.css.map",
-    "static/js/2.c1d921b9.chunk.js.LICENSE.txt": "/todo-list-react/static/js/2.c1d921b9.chunk.js.LICENSE.txt"
+    "main.css": "/react-todo-list/static/css/main.c3079e98.chunk.css",
+    "main.js": "/react-todo-list/static/js/main.e45a21d1.chunk.js",
+    "main.js.map": "/react-todo-list/static/js/main.e45a21d1.chunk.js.map",
+    "runtime-main.js": "/react-todo-list/static/js/runtime-main.c6e33228.js",
+    "runtime-main.js.map": "/react-todo-list/static/js/runtime-main.c6e33228.js.map",
+    "static/js/2.17bd4e28.chunk.js": "/react-todo-list/static/js/2.17bd4e28.chunk.js",
+    "static/js/2.17bd4e28.chunk.js.map": "/react-todo-list/static/js/2.17bd4e28.chunk.js.map",
+    "index.html": "/react-todo-list/index.html",
+    "precache-manifest.58e74ebaa0e329053b77a3a81921986f.js": "/react-todo-list/precache-manifest.58e74ebaa0e329053b77a3a81921986f.js",
+    "service-worker.js": "/react-todo-list/service-worker.js",
+    "static/css/main.c3079e98.chunk.css.map": "/react-todo-list/static/css/main.c3079e98.chunk.css.map",
+    "static/js/2.17bd4e28.chunk.js.LICENSE.txt": "/react-todo-list/static/js/2.17bd4e28.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ec663f4.js",
-    "static/js/2.c1d921b9.chunk.js",
+    "static/js/runtime-main.c6e33228.js",
+    "static/js/2.17bd4e28.chunk.js",
     "static/css/main.c3079e98.chunk.css",
-    "static/js/main.f8c5180d.chunk.js"
+    "static/js/main.e45a21d1.chunk.js"
   ]
 }
